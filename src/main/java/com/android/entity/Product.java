@@ -1,5 +1,7 @@
 package com.android.entity;
 
+import java.util.Date;
+
 public class Product {
  
 	private Integer id;
@@ -8,12 +10,14 @@ public class Product {
 	private Double annualRate;  //年利率
 	private String timeLimit;  //期限
 	private Integer investMoney;  //
-	private Integer startTime;  //起息时间
+	private String startTime;  //起息时间
 	private Integer total;   //项目金额
 	private Integer startMoney; //起购金额
 	private Integer peopleNum;  //购买人数
 	private String introduce;  //产品简介
-	private int tid;
+	private String receivedWay;
+	private Type type;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -50,10 +54,12 @@ public class Product {
 	public void setInvestMoney(Integer investMoney) {
 		this.investMoney = investMoney;
 	}
-	public Integer getStartTime() {
+
+	
+	public String getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(Integer startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
 	public Integer getTotal() {
@@ -80,6 +86,12 @@ public class Product {
 	public void setIntroduce(String introduce) {
 		this.introduce = introduce;
 	}
+	public Type getType() {
+		return type;
+	}
+	public void setType(Type type) {
+		this.type = type;
+	}
 	
 	@Override
 	public String toString() {
@@ -88,14 +100,17 @@ public class Product {
 				+ ", investMoney=" + investMoney + ", startTime=" + startTime
 				+ ", total=" + total + ", startMoney=" + startMoney
 				+ ", peopleNum=" + peopleNum + ", introduce=" + introduce
-				+ ", tid=" + tid + "]";
+				+ ", receivedWay=" + receivedWay + ", type=" + type + "]";
 	}
-	public int getTid() {
-		return tid;
+	public String getReceivedWay() {
+		return receivedWay;
 	}
-	public void setTid(int tid) {
-		this.tid = tid;
+	public void setReceivedWay(String receivedWay) {
+		this.receivedWay = receivedWay;
 	}
+	
+	
+
 	
 	
 }

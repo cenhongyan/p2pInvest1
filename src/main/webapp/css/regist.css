@@ -1,0 +1,80 @@
+body{
+    background: #f1f1f1;
+}
+#head{
+    margin-top: 30px;
+}
+#head img{
+    width: 60px;
+    height: 60px;;
+}
+ul,li{
+    list-style: none;
+}
+#head span{
+    /*图片路径问题，图片在css文件的上一级  ./ 当前目录../ 父级目录/ 根目录*/
+    font-size:30px ;
+    letter-spacing: 5px;
+    color: #2aabd2;
+    font-family: Consolas;
+    margin-left: 20px;
+    font-weight: bolder;
+    font-family:"楷体";
+
+}
+#head span.login{
+    border-left: 1px solid #5e5e5e;
+    color: #5e5e5e;
+    font-size: 26px;
+    padding-left: 10px;
+}
+#head small{
+    position: absolute;
+    top:40px;
+    left: 95px;
+    letter-spacing:2px ;
+    color: #eb4f38;
+    font-family:"楷体";
+    font-size: 14px;
+}
+
+.containerbody{
+    background:#f7f7f7;
+    margin-top: 60px;
+    padding: 10px;
+    width:550px;
+    margin-left: 25%;
+    margin-right: 10%;
+}
+.containerbody table{
+    margin-top: 30px;
+}
+.containerbody tr th{
+   padding-bottom: 40px;
+
+    font-size: 18px;
+  text-align: right;
+
+}
+.containerbody tr td{
+    padding-bottom: 40px;
+}
+.containerbody table tr th{
+    padding-left: 100px;
+    padding-right: 30px;
+    font-weight: 400;
+}
+.containerbody table tr input{
+    width: 200px;
+    padding-left: 30px;
+}
+.containerbody .regi{
+    margin-left: 190px;
+    border: none;
+    background: orangered;
+    color: #ffffff;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 5px;
+}

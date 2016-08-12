@@ -15,6 +15,7 @@ public class BorrowerinfoService {
 	public Borrowerinfo selectById(int id){
 		
 		Borrowerinfo borrowerinfo = borrowerinfoDao.selectById(id);
+		
 		return borrowerinfo;
 		
 	}

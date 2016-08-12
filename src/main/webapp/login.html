@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p2pInvest</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <script type="text/javascript"
+
+            src="http://hovertree.com/texiao/js/1/js/koala.min.1.5.js"></script>
+
+    <script type="text/javascript">
+        Qfast.add('widgets', { path:
+
+                "http://hovertree.com/texiao/js/1/js/terminator2.2.min.js",
+            type:
+                    "js",
+             requires: ['fx'] });
+
+        Qfast(false, 'widgets', function () {
+            K.tabs({
+                id: 'decoroll2', //焦点图包裹 id
+                conId: "decoimg_a2", //大图域包裹id
+                tabId: "deconum2", //小圆点数字提示id
+                tabTn: "a",
+                conCn: '.decoimg_b2', //大图域配置class
+                auto: 1, //自动播1或0
+                effect: 'fade', //效果配置
+                eType: 'mouseover', //鼠标事件
+                pageBt: true, //是否有按钮切换页码
+                bns: ['.prev', '.next'], //前后按钮配置
+                interval: 3000//停顿时间
+
+            })
+        })
+    </script>
+<style>
+    .decoimg_b2 img{
+        width:250px;
+        height: 300px;
+        margin-left: 40px;
+    }
+     ul.num_a2{width:12px;position:absolute;top:10%;right:50px;}
+     ul.num_a2 li{width:12px;height:12px;margin-bottom:50px;position:relative;}
+     ul.num_a2 .current{color:#4D4D4F;background-color:#eb4f38;-webkit-transform:scale(1.8);transform:scale(1.8);}
+     ul.num_a2 a{width:100%;height:100%;line-height:100%;border-radius:50%;text-indent:-120px;color:#808285;background-color:#808285;
+        position:absolute;top:0;left:0;-webkit-transition:-webkit-transform 0.5s ease, background-color 0.5s ease;transition:transform 0.5s ease, background-color 0.5s ease;}
+
+</style>
+</head>
+<body>
+
+ <div class="container">
+    <div class="row" id="head">
+        <div class="col-sm-8" >
+            <img src="images/money.png"><span>p2p投资</span>
+            <small>p2pInvest.com</small>
+            <span class="login">登陆</span>
+        </div>
+    </div>
+     <div class="row" id="content">
+    <!--     <div class="col-sm-2" style="border: 1px solid red">
+
+         </div>-->
+         <div class="col-sm-6" >
+             <div id="decoroll2" class="imgfocus">
+
+                 <div id="decoimg_a2" class="imgbox">
+
+                     <div class="decoimg_b2">
+
+                         <a href="http://hovertree.com/hvtart/bjae/f03e85410878db53.htm">
+
+                             <img src="images/in3.png">
+
+                         </a>
+
+                     </div>
+
+                     <div class="decoimg_b2">
+
+                         <a href="http://keleyi.com/">
+
+                             <img src="images/in1.png">
+
+                         </a>
+
+                     </div>
+
+                     <div class="decoimg_b2">
+
+                         <a href="http://hovertree.com/shortanswer/">
+
+                             <img src="images/in2.png">
+
+                         </a>
+
+                     </div>
+
+                     <div class="decoimg_b2">
+
+                         <a href="http://hovertree.com/guestbook/">
+
+                             <img src="images/safe.png">
+
+                         </a>
+
+                     </div>
+
+                 </div>
+
+                 <ul id="deconum2" class="num_a2">
+
+                     <li><a href="javascript:void(0)" hidefocus="true" target="_self">
+
+                         一站式借款服务
+
+                     </a></li>
+                     <li><a href="javascript:void(0)" hidefocus="true" target="_self">
+
+                         高收益灵活投资
+
+                     </a></li>
+                     <li><a href="javascript:void(0)" hidefocus="true" target="_self">
+
+                       账户资金安全
+
+                     </a></li>
+                     <li><a href="javascript:void(0)" hidefocus="true" target="_self">
+
+                         全方位安全保障
+
+                     </a></li>
+                 </ul>
+             </div>
+         </div>
+         <div class="col-sm-6" >
+               <div class="right">
+                 <div class="head">
+                          用户登陆
+                 </div>
+                   <form  id="loginForm">
+                   <div id="myTabContent" class="tab-content">
+                       <div class="tab-pane fade in active" id="home">
+
+                              <ul>
+                                  <li>
+                                      <label><input type="text" class="user" placeholder="请输入用户名" name="userName" ></label>
+                                  </li>
+                                  <li>
+                                      <label><input type="password" class="pwd" placeholder="请输入密码" name="password"></label>
+                                  </li>
+
+                              </ul>
+
+                           <div class="logbtn">
+                               <input type="button" value="登陆" id="clickbtn">
+                           </div>
+
+                           <div class="re">
+                               <label>
+                                                                                                   没有账号？<a>注册</a>
+                               </label>
+                           </div>
+
+                       </div>
+                   </div>
+                   </form>
+               </div>
+         </div>
+     </div>
+</div>
+</body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  $('#clickbtn').click(function(){
+	  $.ajax({
+		  url:"userlogin",
+		  type:'POST',
+		  data:$("#loginForm").serialize(),
+		  success:function(data){
+			  alert(JSON.stringify(data));
+			 if(data.code == 0)
+				 {
+				     window.location.href="index.html";
+				 }
+			  
+		  }
+	  })
+  })
+
+</script>
+
+</html>

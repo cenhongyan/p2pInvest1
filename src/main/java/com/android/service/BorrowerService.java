@@ -17,4 +17,12 @@ public class BorrowerService {
 		return borrowerDao.selectAll();
 	}
 
+	public List<Borrower> selectByAll(){
+		return borrowerDao.selectByAll();
+	}
+	
+	public Borrower selectById(int id){
+		return borrowerDao.selectById(id);
+	}
+
 }

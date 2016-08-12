@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.android.dao.BorrowerDao">
+	 <resultMap type="com.android.entity.Borrower" id="BorrowerResult">
+	    <id column="id" property="id"></id>
+	    <result column="annualrate" property="annualRate"/>
+	    <result column="total" property="total"/>
+	    <result column="timelimit" property="timeLimit"/>
+	    <result column="investmoney" property="investMoney"/>
+	    <result column="receivedway" property="receivedWay"/>
+	    <result column="peoplenum" property="peopleNum"/>
+	    
+	    
+	    <association property="borrowPlatform" javaType="com.android.entity.BorrowPlatform">
+	     <id column="t_id" property="id"></id>
+	     <result column="name" property="name"/>
+	     <result column="title" property="title"/>
+	     <result column="t_peoplenum" property="peopleNum"/>
+	     <result column="t_annualrate" property="annualRate"/>
+	    </association>
+	 </resultMap>
+	 
+	 <select id="selectAll" resultMap="BorrowerResult">
+	   SELECT b.* ,bp.name FROM borrower b,borrowplatform bp WHERE bp.id = b.bpid 
+	 </select>
+	 
+	  <select id="selectByAll" resultMap="BorrowerResult">
+	   select b.*,bp.name from transfer t,borrower b,borrowplatform bp where b.id = t.bid and b.bpid = bp.id
+	 </select>
+</mapper>

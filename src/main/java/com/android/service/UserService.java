@@ -17,4 +17,8 @@ public class UserService {
 	public List<User> selectAll(){
 		return userDao.selectAll();
 	}
+	
+	public User selectByName(String name){
+		return userDao.selectByName(name);
+	}
 }

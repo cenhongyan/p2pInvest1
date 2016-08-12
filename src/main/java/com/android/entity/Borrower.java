@@ -6,24 +6,31 @@ package com.android.entity;
  */
 public class Borrower {
 	private int id;
-	private Double annualrate; //年利率
+	private Double annualRate; //年利率
 	private Integer total;  
-	private String timelimit;
-	private Integer percentage;
-	private String receivedway;
-	private Integer peoplenum;
-	
+	private String timeLimit;
+	private Integer investMoney;
+	private String receivedWay;
+	private Integer peopleNum;
+	private BorrowPlatform borrowPlatform;
+	@Override
+	public String toString() {
+		return "Borrower [id=" + id + ", annualRate=" + annualRate + ", total="
+				+ total + ", timeLimit=" + timeLimit + ", investMoney="
+				+ investMoney + ", receivedWay=" + receivedWay + ", peopleNum="
+				+ peopleNum + ", borrowPlatform=" + borrowPlatform + "]";
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Double getAnnualrate() {
-		return annualrate;
+	public Double getAnnualRate() {
+		return annualRate;
 	}
-	public void setAnnualrate(Double annualrate) {
-		this.annualrate = annualrate;
+	public void setAnnualRate(Double annualRate) {
+		this.annualRate = annualRate;
 	}
 	public Integer getTotal() {
 		return total;
@@ -31,37 +38,35 @@ public class Borrower {
 	public void setTotal(Integer total) {
 		this.total = total;
 	}
-	public String getTimelimit() {
-		return timelimit;
+	public String getTimeLimit() {
+		return timeLimit;
 	}
-	public void setTimelimit(String timelimit) {
-		this.timelimit = timelimit;
+	public void setTimeLimit(String timeLimit) {
+		this.timeLimit = timeLimit;
 	}
-	public Integer getPercentage() {
-		return percentage;
+	public Integer getInvestMoney() {
+		return investMoney;
 	}
-	public void setPercentage(Integer percentage) {
-		this.percentage = percentage;
+	public void setInvestMoney(Integer investMoney) {
+		this.investMoney = investMoney;
 	}
-	public String getReceivedway() {
-		return receivedway;
+	public String getReceivedWay() {
+		return receivedWay;
 	}
-	public void setReceivedway(String receivedway) {
-		this.receivedway = receivedway;
+	public void setReceivedWay(String receivedWay) {
+		this.receivedWay = receivedWay;
 	}
-	public Integer getPeoplenum() {
-		return peoplenum;
+	public Integer getPeopleNum() {
+		return peopleNum;
 	}
-	public void setPeoplenum(Integer peoplenum) {
-		this.peoplenum = peoplenum;
+	public void setPeopleNum(Integer peopleNum) {
+		this.peopleNum = peopleNum;
 	}
-	@Override
-	public String toString() {
-		return "Borrower [id=" + id + ", annualrate=" + annualrate + ", total="
-				+ total + ", timelimit=" + timelimit + ", percentage="
-				+ percentage + ", receivedway=" + receivedway + ", peoplenum="
-				+ peoplenum + "]";
+	public BorrowPlatform getBorrowPlatform() {
+		return borrowPlatform;
+	}
+	public void setBorrowPlatform(BorrowPlatform borrowPlatform) {
+		this.borrowPlatform = borrowPlatform;
 	}
 	
-
 }

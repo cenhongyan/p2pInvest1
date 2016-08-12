@@ -11,4 +11,7 @@ public interface UserDao {
 	@Select("select * from user")
    List<User> selectAll();
 	
+	@Select("select * from user where username = #{userName}")
+	User  selectByName(String name);
+	
 }

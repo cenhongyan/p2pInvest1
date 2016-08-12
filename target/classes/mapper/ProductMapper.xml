@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.android.dao.ProductDao">
+	 <resultMap type="com.android.entity.Product" id="ProductResult">
+	    <id column="id" property="id"></id>
+	    <result column="name" property="name"/>
+	    <result column="title" property="title"/>
+	    <result column="annualrate" property="annualRate"/>
+	    <result column="timelimit" property="timeLimit"/>
+	    <result column="investmoney" property="investMoney"/>
+	    <result column="starttime" property="startTime"/>
+	    <result column="total" property="total"/>
+	    <result column="startmoney" property="startMoney"/>
+	    <result column="peopleNum" property="peopleNum"/>
+	    <result column="introduce" property="introduce"/>
+	    <result column="receivedway" property="receivedWay"/>
+	    <association property="type" javaType="com.android.entity.Type">
+	     <id column="t_id" property="id"></id>
+	     <result column="type" property="type"/>
+	    </association>
+	 </resultMap>
+	 
+	 <select id="selectAllByOrder" resultMap="ProductResult">
+	   SELECT p.* ,t.type FROM product p,type t WHERE t.id = p.tid ORDER BY tid
+	 </select>
+</mapper>

@@ -1,30 +1,99 @@
 package com.android.entity;
 
 public class User {
-	private int uid;
-	private String uname;
-	private String upwd;
-	public int getUid() {
-		return uid;
-	}
-	public void setUid(int uid) {
-		this.uid = uid;
-	}
-	public String getUname() {
-		return uname;
-	}
-	public void setUname(String uname) {
-		this.uname = uname;
-	}
+	private Integer id;
+	private String userName;
+	private Double totalMoney;
+	private Double income;
+	private Double rechage;
+	private String userInfo;
+	private String telePhone;
+	private String email;
+	private String password;
+	private String gesture;
+	private Integer bid;
+	private Integer integral;
+	
+	
 	@Override
 	public String toString() {
-		return "User [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + "]";
+		return "User [id=" + id + ", userName=" + userName + ", totalMoney="
+				+ totalMoney + ", income=" + income + ", rechage=" + rechage
+				+ ", userInfo=" + userInfo + ", telePhone=" + telePhone
+				+ ", email=" + email + ", password=" + password + ", gesture="
+				+ gesture + ", bid=" + bid + ", integral=" + integral + "]";
 	}
-	public String getUpwd() {
-		return upwd;
+	public String getUserName() {
+		return userName;
 	}
-	public void setUpwd(String upwd) {
-		this.upwd = upwd;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
-
+	public Double getTotalMoney() {
+		return totalMoney;
+	}
+	public void setTotalMoney(Double totalMoney) {
+		this.totalMoney = totalMoney;
+	}
+	public Double getIncome() {
+		return income;
+	}
+	public void setIncome(Double income) {
+		this.income = income;
+	}
+	public Double getRechage() {
+		return rechage;
+	}
+	public void setRechage(Double rechage) {
+		this.rechage = rechage;
+	}
+	public String getUserInfo() {
+		return userInfo;
+	}
+	public void setUserInfo(String userInfo) {
+		this.userInfo = userInfo;
+	}
+	public String getTelePhone() {
+		return telePhone;
+	}
+	public void setTelePhone(String telePhone) {
+		this.telePhone = telePhone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getGesture() {
+		return gesture;
+	}
+	public void setGesture(String gesture) {
+		this.gesture = gesture;
+	}
+	public Integer getBid() {
+		return bid;
+	}
+	public void setBid(Integer bid) {
+		this.bid = bid;
+	}
+	public Integer getIntegral() {
+		return integral;
+	}
+	public void setIntegral(Integer integral) {
+		this.integral = integral;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 }

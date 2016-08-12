@@ -8,6 +8,14 @@ import com.android.entity.Borrower;
 
 public interface BorrowerDao {
 
-	@Select("select * from borrower")
+	
 	List<Borrower> selectAll();
+	
+	
+
+	List<Borrower> selectByAll();
+	
+	//@Select("select * from borrower where id = #{id} UNION select * from borrowerinfo where bid = #{id}")
+    Borrower selectById(int id);
+	
 }

@@ -1,0 +1,110 @@
+body{
+    background: #f1f1f1;
+}
+#head{
+    margin-top: 30px;
+}
+#head img{
+    width: 60px;
+    height: 60px;;
+}
+ul,li{
+    list-style: none;
+}
+#head span{
+  /*图片路径问题，图片在css文件的上一级  ./ 当前目录../ 父级目录/ 根目录*/
+    font-size:30px ;
+    letter-spacing: 5px;
+    color: #2aabd2;
+    font-family: Consolas;
+    margin-left: 20px;
+    font-weight: bolder;
+    font-family:"楷体";
+
+}
+#head span.login{
+    border-left: 1px solid #5e5e5e;
+    color: #5e5e5e;
+    font-size: 26px;
+    padding-left: 10px;
+}
+#head small{
+    position: absolute;
+    top:40px;
+    left: 95px;
+    letter-spacing:2px ;
+    color: #eb4f38;
+    font-family:"楷体";
+    font-size: 14px;
+}
+
+
+#content{
+    margin-top: 60px;
+}
+
+/*******************动画代码 ********************/
+
+.left{
+    margin-top: 100px;
+}
+.right{
+    width: 400px;
+    background: white;
+
+}
+.right .head{
+   text-align: center;
+     padding-top: 10px;
+     padding-bottom: 10px;
+    color: white;
+    font-size: 24px;
+    background: orangered;
+
+}
+.right #home ul{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.right #home ul li{
+    margin-bottom: 30px;
+    list-style: none;
+}
+.right #home .user{
+    background: url("../image/user (1).png")no-repeat;
+    height: 35px;
+    padding-left: 35px;
+    border: 1px solid orange;
+}
+
+.right #home .pwd{
+    background: url("../image/pwd.png")no-repeat;
+    height: 35px;
+    padding-left: 35px;
+    border: 1px solid orange;
+}
+.right .logbtn{
+    padding:10px;
+}
+.right .logbtn input{
+    width: 225px;
+    height: 40px;
+    background: orangered;
+    color: white;
+    font-size: 20px;
+    margin-left: 90px;
+    border: none;
+    border-radius: 5px;
+
+}
+.right .re{
+    margin-left:140px;
+    margin-top: 20px;
+    color: #999;
+
+}
+.right .re a{
+    padding-left: 40px;
+
+}
+/*******************动画代码 ********************/

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.android.dao.ProductInvestDao">
+	 <resultMap type="com.android.entity.ProductInvest" id="ProductInvestResult">
+	    <id column="id" property="id"></id>
+	    <result column="pid" property="pid"/>
+	    <result column="uid" property="uid"/>
+	    <result column="status" property="status"/>
+	    <result column="startTime" property="startTime"/>
+	    <result column="investmoney" property="investMoney"/>
+	    
+	    <association property="product" javaType="com.android.entity.Product">
+	     <id column="t_id" property="id"></id>
+	    <result column="name" property="name"/>
+	    <result column="title" property="title"/>
+	    <result column="annualrate" property="annualRate"/>
+	    <result column="timelimit" property="timeLimit"/>
+	    <result column="invest_money" property="investMoney"/>
+	    <result column="starttime" property="startTime"/>
+	    <result column="total" property="total"/>
+	    <result column="startmoney" property="startMoney"/>
+	    <result column="peopleNum" property="peopleNum"/>
+	    <result column="introduce" property="introduce"/>
+	    <result column="receivedway" property="receivedWay"/>
+	    </association>
+	    
+	        
+	    <association property="user" javaType="com.android.entity.User">
+	     <id column="u_id" property="id"></id>
+	    <result column="userName" property="userName"/>
+	    <result column="totalMoney" property="totalMoney"/>
+	    <result column="income" property="income"/>
+	    <result column="rechage" property="rechage"/>
+	    <result column="userInfo" property="userInfo"/>
+	    <result column="telePhone" property="telePhone"/>
+	    <result column="email" property="email"/>
+	    <result column="password" property="password"/>
+	    <result column="gesture" property="gesture"/>
+	    <result column="bid" property="bid"/>
+	    <result column="integral" property="integral"/>
+	    </association>
+	    
+	 </resultMap>
+	 
+	 <select id="selectAll" resultMap="ProductInvestResult">
+	   SELECT pi.* ,p.*,u.*,p.investmoney as invest_money FROM productinvest pi,product p,user u WHERE p.id = pi.pid and u.id = pi.uid and pi.status = #{status}
+	 </select>
+</mapper>

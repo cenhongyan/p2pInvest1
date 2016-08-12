@@ -1,0 +1,80 @@
+.user .img{
+    font-size: 18px;
+}
+
+.user .img img{
+    padding-top: 60px ;
+    padding-left: 35%;
+}
+.user .name{
+    padding-top: 20px;
+    padding-left: 35%;
+}
+.center a{
+    text-decoration: none;
+     padding-left: 30%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4D4D4F;
+
+}
+.center span{
+    padding-left: 10%;
+    font-size: 24px;
+}
+.center{
+    background: #faf2cc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.center a:hover{
+    margin-left: 10%;
+}
+.money{
+    margin-top: 70px;
+    margin-left: 10%;
+    font-size: 20px;
+    font-weight: 400;
+}
+.money span{
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.money p{
+    padding-top: 60px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.btn{
+    margin-top: 120px;
+}
+.btn a{
+    padding: 3% 15% 3% 15%;
+    background:orange;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.btn a.ti{
+    border: 1px solid #eeeeee;
+    background: white;
+    color: black;
+}
+.username{
+   padding-top: 50px;
+    font-size: 18px;
+}
+.username span{
+    font-size: 20px;
+    color: #d58512;
+    font-weight: bold;
+}
+.username a{
+    padding: 5% 30% 5% 30%;
+    background: #d58512;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

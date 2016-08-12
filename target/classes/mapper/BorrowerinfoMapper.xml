@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE mapper
+ 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.android.dao.BorrowerinfoDao">
+	 <resultMap type="com.android.entity.Borrowerinfo" id="BorrowerinfoResult">
+	    <id column="id" property="id"></id>
+	    <result column="uid" property="uid"/>
+	    <result column="sex" property="sex"/>
+	    <result column="birthday" property="birthday"/>
+	    <result column="address" property="address"/>
+	    <result column="success" property="success"/>
+	    <result column="noRepayment" property="noRepayment"/>
+	     <result column="tel" property="tel"/>
+	    <result column="isVerify" property="isVerify"/>
+	    <result column="borrowMoney" property="borrowMoney"/>
+	    <result column="limit" property="limit"/>
+	    <result column="income" property="income"/>
+	     <result column="realName" property="realName"/>
+	  <!--   <association property="borrower" javaType="com.android.entity.Borrower">
+	     <id column="t_id" property="id"></id>
+	     <result column="annualrate" property="annualRate"/>
+	    <result column="total" property="total"/>
+	    <result column="timelimit" property="timeLimit"/>
+	    <result column="investmoney" property="investMoney"/>
+	    <result column="receivedway" property="receivedWay"/>
+	    <result column="peoplenum" property="peopleNum"/>
+	    </association> -->
+	    
+	    
+	        <collection property="borrower" ofType="com.android.entity.Borrower" column="bid">  
+            <id column="o_id" property="id"/>  
+            <result column="annualrate" property="annualRate"/>
+	      <result column="total" property="total"/>
+	      <result column="timelimit" property="timeLimit"/>
+	      <result column="investmoney" property="investMoney"/>
+	     <result column="receivedway" property="receivedWay"/>
+	     <result column="peoplenum" property="peopleNum"/>  
+         </collection> 
+	    
+	 </resultMap>
+	 
+	 <select id="selectById" resultMap="BorrowerinfoResult">
+	   SELECT b.* ,bf.* FROM borrower b,borrowerinfo bf WHERE bf.bid= b.id and bf.bid=#{id}
+	 </select>
+</mapper> 

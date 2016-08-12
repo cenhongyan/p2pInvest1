@@ -6,13 +6,17 @@ public class Borrowerinfo {
 	private String sex;
 	private Integer birthday;
 	private String address;
-	private String level;
-	private String purpose;
-	private Integer publish;
+
+    private String tel;
+	
 	private Integer success;
-	private Integer norepayment;
-	private Integer isverify;
-	private Integer bid; 
+	private Integer noRepayment;
+	private Integer borrowMoney;
+	private String limit;
+	private Integer income;
+	private String realName;
+	private Integer isVerify;
+	private Borrower borrower;
 	public Integer getId() {
 		return id;
 	}
@@ -43,23 +47,11 @@ public class Borrowerinfo {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getLevel() {
-		return level;
+	public String getTel() {
+		return tel;
 	}
-	public void setLevel(String level) {
-		this.level = level;
-	}
-	public String getPurpose() {
-		return purpose;
-	}
-	public void setPurpose(String purpose) {
-		this.purpose = purpose;
-	}
-	public Integer getPublish() {
-		return publish;
-	}
-	public void setPublish(Integer publish) {
-		this.publish = publish;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 	public Integer getSuccess() {
 		return success;
@@ -67,33 +59,57 @@ public class Borrowerinfo {
 	public void setSuccess(Integer success) {
 		this.success = success;
 	}
-	public Integer getNorepayment() {
-		return norepayment;
+	public Integer getNoRepayment() {
+		return noRepayment;
 	}
-	public void setNorepayment(Integer norepayment) {
-		this.norepayment = norepayment;
+	public void setNoRepayment(Integer noRepayment) {
+		this.noRepayment = noRepayment;
 	}
-	public Integer getIsverify() {
-		return isverify;
+	public Integer getBorrowMoney() {
+		return borrowMoney;
 	}
-	public void setIsverify(Integer isverify) {
-		this.isverify = isverify;
+	public void setBorrowMoney(Integer borrowMoney) {
+		this.borrowMoney = borrowMoney;
 	}
-	
+	public String getLimit() {
+		return limit;
+	}
+	public void setLimit(String limit) {
+		this.limit = limit;
+	}
+	public Integer getIncome() {
+		return income;
+	}
+	public void setIncome(Integer income) {
+		this.income = income;
+	}
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+	public Integer getIsVerify() {
+		return isVerify;
+	}
+	public void setIsVerify(Integer isVerify) {
+		this.isVerify = isVerify;
+	}
+	public Borrower getBorrower() {
+		return borrower;
+	}
+	public void setBorrower(Borrower borrower) {
+		this.borrower = borrower;
+	}
 	@Override
 	public String toString() {
 		return "Borrowerinfo [id=" + id + ", uid=" + uid + ", sex=" + sex
-				+ ", birthday=" + birthday + ", address=" + address
-				+ ", level=" + level + ", purpose=" + purpose + ", publish="
-				+ publish + ", success=" + success + ", norepayment="
-				+ norepayment + ", isverify=" + isverify + ", bid=" + bid + "]";
-	}
-	public Integer getBid() {
-		return bid;
-	}
-	public void setBid(Integer bid) {
-		this.bid = bid;
-	}
+				+ ", birthday=" + birthday + ", address=" + address + ", tel="
+				+ tel + ", success=" + success + ", noRepayment=" + noRepayment
+				+ ", borrowMoney=" + borrowMoney + ", limit=" + limit
+				+ ", income=" + income + ", realName=" + realName
+				+ ", isVerify=" + isVerify + ", borrower=" + borrower + "]";
+	} 
 	
 
 }
